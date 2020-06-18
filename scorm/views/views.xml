@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+  
+
+    <record model="ir.ui.view" id="scorm_view">
+      <field name="name">scorm form</field>
+      <field name="model">slide.channel</field>
+      <field name="inherit_id" ref="website_slides.view_slide_channel_form" />
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//field[@name='website_id']" position="after">
+            <field name="scorm_package"/>
+          </xpath>
+        </data>
+      </field>
+    </record>
+
+  </data>
+</odoo>
+
+
